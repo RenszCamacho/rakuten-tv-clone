@@ -410,7 +410,7 @@ img {
 
 @media screen and (max-width: 1240px) {
   .navbar {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 10;
@@ -428,12 +428,6 @@ img {
   height: 100%;
 }
 
-@media screen and (max-width: 1240px) {
-  .navbar__logo {
-    display: none;
-  }
-}
-
 .navbar__link {
   display: inline-block;
 }
@@ -442,6 +436,12 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (max-width: 1240px) {
+  .navbar__list {
+    display: none;
+  }
 }
 
 .navbar__item {
@@ -461,6 +461,12 @@ img {
 
 .navbar__search-box {
   position: relative;
+}
+
+@media screen and (max-width: 1240px) {
+  .navbar__search-box {
+    display: none;
+  }
 }
 
 .navbar__input {
@@ -729,7 +735,7 @@ img {
 
 @media screen and (max-width: 1240px) {
   .main-container__wrapper-row--modify {
-    padding: 0;
+    padding-bottom: 3rem;
   }
 }
 
@@ -856,6 +862,12 @@ img {
   padding: 3.5rem 5.5rem 1.5rem;
 }
 
+@media screen and (max-width: 1240px) {
+  .footer-container__terms {
+    display: none;
+  }
+}
+
 .footer-container__terms-img {
   width: 12.2rem;
 }
@@ -889,5 +901,54 @@ img {
 .footer-container__date-description {
   color: #999999;
   font-size: 1.4rem;
+}
+
+.footer-container__navbar-rwd {
+  display: none;
+  width: 100%;
+  background-color: black;
+}
+
+@media screen and (max-width: 1240px) {
+  .footer-container__navbar-rwd {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.footer-container__navbar-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-container__navbar-item {
+  color: #999999;
+  list-style: none;
+  text-align: center;
+  font-size: 1rem;
+  -webkit-transition: all 200 ease-in-out;
+  transition: all 200 ease-in-out;
+  cursor: pointer;
+}
+
+.footer-container__navbar-item:hover {
+  color: #ffe100;
+}
+
+.footer-container__icon {
+  font-size: 1.7rem;
+  padding-bottom: 0.6rem;
+}
+
+.footer-container__span {
+  text-transform: uppercase;
 }
 /*# sourceMappingURL=main.css.map */
